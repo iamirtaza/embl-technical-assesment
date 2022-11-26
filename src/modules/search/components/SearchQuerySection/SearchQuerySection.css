@@ -1,0 +1,26 @@
+#search-query-input {
+  display: flex;
+  align-items: flex-start;
+}
+
+#search-query-input textarea {
+	margin-right: 20px;
+	width: 100%;
+    height: 100px;
+}
+
+#search-query-input .primary-button, .secondary-button {
+    width: 200px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.secondary-button {
+    margin-top: 10px;
+}
+
+#search-query-input .primary-button svg {
+	margin-right: 5px;
+}

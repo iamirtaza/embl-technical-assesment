@@ -1,0 +1,28 @@
+.primary-button {
+	background-color: #20699c;
+    color: white;
+    border: none;
+	cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #5797c5;
+}
+
+.primary-button:disabled {
+   background: #b2b4b6;
+   cursor: not-allowed;
+}
+
+.secondary-button {
+	color: #20699c;
+    background: #ffff;
+	border: thin solid #20699c;
+}
+
+.secondary-button:hover {
+	cursor: pointer;
+    border-color: #5797c5;
+    color: #5797c5;
+    background-color: #ffff;
+}

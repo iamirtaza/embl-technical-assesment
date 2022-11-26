@@ -1,0 +1,12 @@
+.empty {
+   background: #d3e4f0;
+   padding: 12px 16px;
+   word-wrap: break-word;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+}
+
+.empty svg {
+	margin-right: 5px;
+}

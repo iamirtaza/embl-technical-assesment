@@ -1,0 +1,37 @@
+.term-input-section-header {
+	background-color: #d5e7f2;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.term-input-section-header h3 {
+	margin: 0;
+}
+
+#label {
+    color: #414141;	
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+#term-input {
+	display: flex;
+	margin-top: 5px;
+}
+
+#term-input input {
+	margin-right: 20px;
+	width: 100%;
+}
+
+#term-input .primary-button {
+    width: 100px;
+}
+
+#term-input select {
+	border-radius: 0;
+    border: 1px solid #cac5c5;
+    width: 110px;
+}

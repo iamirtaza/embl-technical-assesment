@@ -19,12 +19,16 @@ export const SearchResultItem: React.FC<Props> = ({
 	pmcid
 }) => {
 	const authorList = authorString?.split(",");
+
 	return (
 		<div data-testid="search-result-item" className="search-result-item">
 			<h4 className="title"><a href="/">{title}</a></h4>
 			<p className="author">
 				{
-					authorList?.map((author, index) => <a key={`${author}-${index}`} href="/">{author}{index + 1 !== authorList.length && ","}</a>)
+					authorList?.map((author, index) =>
+						<a key={`${author}-${index}`} href="/">
+							{author}{index + 1 !== authorList.length && ","}
+						</a>)
 				}
 			</p>
 			<p><a href="/" className="journal-title">{journalTitle}</a></p>

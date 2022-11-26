@@ -16,17 +16,20 @@ export const SearchResultsHeader: React.FC<Props> = ({
 }) => {
 	const itemsCountPerPage = 25
 	const { from, to } = useCalculateStats({ currentPage, totalResults })
-	return <div id="search-results-header">
-		<p>{from} - {to} of <b>{totalResults?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b> results</p>
-		<Pagination
-			activePage={currentPage}
-			itemsCountPerPage={itemsCountPerPage}
-			totalItemsCount={totalResults ?? 0}
-			pageRangeDisplayed={5}
-			onChange={(page) => onPageChange(page)}
-			prevPageText={currentPage !== 1 ? "Prev" : ""}
-			nextPageText="Next"
-			hideFirstLastPages
-		/>
-	</div>
+
+	return (
+		<div id="search-results-header">
+			<p>{from} - {to} of <b>{totalResults?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</b> results</p>
+			<Pagination
+				activePage={currentPage}
+				itemsCountPerPage={itemsCountPerPage}
+				totalItemsCount={totalResults ?? 0}
+				pageRangeDisplayed={5}
+				onChange={(page) => onPageChange(page)}
+				prevPageText={currentPage !== 1 ? "Prev" : ""}
+				nextPageText="Next"
+				hideFirstLastPages
+			/>
+		</div>
+	)
 }

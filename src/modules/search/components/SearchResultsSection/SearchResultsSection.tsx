@@ -4,6 +4,8 @@ import { Empty } from "./components/Empty/Empty"
 import { SearchResultItem } from "./components/SearchResultItem/SearchResultItem"
 import { SearchResultsHeader } from "./components/SearchResultsHeader/SearchResultsHeader"
 
+import "./SearchResultsSection.css"
+
 export type Props = {
 	searchResult?: SearchResult
 	isLoading: boolean
@@ -20,7 +22,7 @@ export const SearchResultsSection: React.FC<Props> = ({
 	const { searchMeta, result } = searchResult ?? {}
 	const { totalResults } = searchMeta ?? {}
 
-	const content = isLoading ? <p style={{width:'100%'}}>Loading</p> : result && result?.length > 0 ? <>
+	const content = isLoading ? <div id="loader-container"><div className="loader"></div></div> : result && result?.length > 0 ? <>
 		<SearchResultsHeader
 			totalResults={totalResults}
 			onPageChange={onPageChange}
@@ -57,7 +59,7 @@ export const SearchResultsSection: React.FC<Props> = ({
 	return (
 		<div data-testid="search-results-section" className="section">
 			<h2 className="section-heading pl-15">Search results</h2>
-			<div className="px-15">
+			<div className="px-15" style={{ minHeight: '100vh' }}>
 				{content}
 			</div>
 		</div>
